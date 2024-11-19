@@ -6,6 +6,8 @@ data/datasets/DISFA/
 data/predictions/BP4D/
 data/predictions/DISFA/
 data/predictions/DISFA_computeLocal/
-data/weights/stacking_head/
+data/weights/stacking_head/baseLearners
+data/weights/stacking_head/stacking_head/DISFA/
+data/weights/stacking_head/stacking_head/BP4D/
 tmp_extracting/
 tmp_files/
