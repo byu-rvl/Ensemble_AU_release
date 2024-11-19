@@ -1,0 +1,10 @@
+"""
+Code originally from https://github.com/CVI-SZU/ME-GraphAU file: checkpoints/checkpoints.txt
+Modified and adapted to work in the ELEGANT framework by Andrew Sumsion
+Modified and adapted to work in the EnsembleAU framework by Andrew Sumsion
+"""
+
+download pre-train backbones before training
+
+'swin_transformer_base': 'https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224.pth'
+'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth'

@@ -1,0 +1,11 @@
+python saveAllEmbs.py --dataset $3 \
+                        --arc $1 \
+                        --exp-name use_resume \
+                        --resume $4 \
+                        -b 32 \
+                        --numEncoderLayers $2 \
+                        --lam 0 \
+                        --lam2 0 \
+                        --lam3 0 \
+                        --epochs 5 \
+                        --gpu_ids 0 \

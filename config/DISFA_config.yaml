@@ -1,0 +1,5 @@
+dataset_path: 'data/datasets/DISFA/'
+num_classes: 8
+neighbor_num: 3
+encoder_layers: 1
+stacking_times: 2

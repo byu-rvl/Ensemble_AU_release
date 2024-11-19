@@ -1,0 +1,3 @@
+python preprocessing/dataset_prep/DISFA_image_label_process.py
+python preprocessing/dataset_prep/DISFA_calculate_AU_class_weights.py
+python preprocessing/dataset_prep/DISFA_deal_AU_relation.py

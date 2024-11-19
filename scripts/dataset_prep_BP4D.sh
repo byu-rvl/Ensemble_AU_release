@@ -1,0 +1,3 @@
+python preprocessing/dataset_prep/BP4D_image_label_process.py
+python preprocessing/dataset_prep/BP4D_calculate_AU_class_weights.py
+python preprocessing/dataset_prep/BP4D_deal_AU_relation.py

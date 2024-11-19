@@ -1,0 +1,6 @@
+# dataset_path: 'data/datasets/BP4D/'
+dataset_path: '/fslhome/andreww9/code/original_datasets/BP4D_croppped_MTCNN'
+num_classes: 12
+neighbor_num: 4
+encoder_layers: 1
+stacking_times: 4
