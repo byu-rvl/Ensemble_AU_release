@@ -11,6 +11,7 @@ Author names here (removed for blind review)
 As the code is rather large, we provide descriptions of possible desired tasks in different sections. Each section is outlined here. 
 
 Section outlines:
+0. Download this github repo.
 1. Download model parameters: Information about what is included and what/why it is not included in this CVPR anonymous review.
 2. Conda environment: Instructions for setting up a conda environment.
 3. Uncompress all: Instructions to uncompress the necessary files before running the various tests below.
@@ -19,7 +20,13 @@ Section outlines:
 6. Testing the base learners: Instructions for validating the base learners.
 7. SynAU dataset: Instructions for viewing the SynAU dataset and the code used to generate the SynAU dataset.
 
+## 0. Download this github repo.
 
+If you desire to run any code, you need to do a git clone and not download the zip file. If you only desire to look at the code, downloading the zip file will work. This is because the data is included with git LFS which will only download the files using git clone. 
+
+There is ~50G in the initial download. You will need an additional ~100G to run the full uncompress all. If one does not have enough storage for this, they may modify the preprocessing/uncompress_all.py to only uncompress those items that are needed for the desired task. Also, after the initial cloning, large files that one does not plan to use may be deleted.
+
+We explain the need for the large files in this github repo in Section 1 (Download model parameters) below.
 
 ## 1. Download model parameters:
 
@@ -51,7 +58,9 @@ conda env create -f ennvironment.yml
 Prerequisites:
 - Conda environment (created and activated).
 
-TODO: need to do. 
+```bash
+python preprocessing/uncompress_all.py
+```
 
 ## 4. Testing the stacking head:
 Prerequisites: 
@@ -63,12 +72,12 @@ The testing of the stacking heads is run through a bash script. The number after
 BP4D:
 
 ```bash
-./scripts/test_BP4D.sh 1 & ./scripts/test_BP4D.sh 2 & ./scripts/test_BP4D.sh 3 
+./scripts/test_BP4D.sh 1 && ./scripts/test_BP4D.sh 2 && ./scripts/test_BP4D.sh 3 
 ```
 
 DISFA:
 ```bash
-./scripts/test_DISFA.sh 1 & ./scripts/test_DISFA.sh 2 & ./scripts/test_DISFA.sh 3 
+./scripts/test_DISFA.sh 1 && ./scripts/test_DISFA.sh 2 && ./scripts/test_DISFA.sh 3 
 ```
 
 ## 5. Preprocessing:

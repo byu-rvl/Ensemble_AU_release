@@ -9,5 +9,9 @@ data/predictions/DISFA_computeLocal/*.tar
 data/weights/stacking_head/baseLearners
 data/weights/stacking_head/stacking_head/DISFA/
 data/weights/stacking_head/stacking_head/BP4D/
+data/datasets/SynAU_expanded/
+data/datasets/SynAU_tar/
+data/weights/stacking_head/BP4D/
+data/weights/stacking_head/DISFA/
 tmp_extracting/
 tmp_files/
