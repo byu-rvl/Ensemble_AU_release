@@ -1,8 +1,10 @@
 __pycache__/
 results/
 *.pth
-data/datasets/BP4D/
-data/datasets/DISFA/
+data/datasets/BP4D/img/
+data/datasets/BP4D/lmk/
+data/datasets/DISFA/img/
+data/datasets/DISFA/lmk/
 data/predictions/BP4D/*.tar
 data/predictions/DISFA/*.tar
 data/predictions/DISFA_computeLocal/*.tar
