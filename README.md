@@ -123,7 +123,7 @@ DISFA (baselearners options 0-46):
 Prerequisites:
 - Uncompress all.
 
-View dataset in data/datasets/SynAU directory. To look at the code to generate the SynAU dataset please look in the SynAU_generate directory. The SynAU_generate/README.md provides the necessary information used to generate the SynAU dataset and more.
+View dataset in data/datasets/SynAU directory. To look at the code to generate the SynAU dataset please look in the data/datasets/SynAU_generate directory. The data/datasets/SynAU_generate/README.md provides the necessary information used to generate the SynAU dataset and more.
 
 
 ## Architecture Overview:
