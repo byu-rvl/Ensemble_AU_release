@@ -1,4 +1,5 @@
 import numpy as np
+from pathlib import Path
 #parameters for the video generation. See the modified code in 7_FACSHuman.py
 
 GENERATE_ON_STARTUP = True
@@ -7,17 +8,14 @@ ONLY_ONE_VID_PER_PERSON = True #DO NOT CHANGE. MAKES IT TO SKIP VIDEOS THAT ALRE
 MAKE_IMAGES_NOT_VIDEOS = True
 
 #BASIC PARAMETERS
-SAVE_LOCATION = "/media/andreww9/disk2/compute/datasets/generated_FACS/allPeople"
-# SAVE_LOCATION = "/fslhome/andreww9/code/original_datasets/makehuman_out/allPeople"
+SAVE_LOCATION = "out_allPeople/"
+Path(SAVE_LOCATION).mkdir(parents=True, exist_ok=True)
 
-ROOT_DATA_PATH = "/media/andreww9/disk2/research/FACS_items/makehuman_test/makehuman/makehuman/data/"
-# ROOT_DATA_PATH = "/fslhome/andreww9/code/research/rvl_makehuman/makehuman/data"
+ROOT_DATA_PATH = "data/"
 
-DOCUMENTS_DATA_PATH = "/home/andreww9/Documents/makehuman/v1py3/data/"
-# DOCUMENTS_DATA_PATH = "/fslhome/andreww9/makehuman/v1py3/data/"
+DOCUMENTS_DATA_PATH = "Documents/makehuman/v1py3/data/"
 
-DOCUMENTS_DATA_PATH_PARENT = "/home/andreww9/Documents"
-# DOCUMENTS_DATA_PATH_PARENT = "/fslhome/andreww9"
+DOCUMENTS_DATA_PATH_PARENT = "Documents"
 
 # VIDEO PARAMETERS
 NUMBER_VIDEOS_PER_MOTION = 10

@@ -1,0 +1,37 @@
+VERSION: UNKNOWN:UNKNOWN
+SHORT VERSION: alpha
+LONG VERSION: 1.2.1 alpha (UNKNOWN:UNKNOWN)
+BASEMESH VERSION: hm08
+IS BUILT (FROZEN): No
+IS RELEASE VERSION: No
+DEFAULT ENCODING: utf-8
+FILESYSTEM ENCODING: utf-8
+STDOUT ENCODING: utf-8
+LOCALE PREFERRED ENCODING: UTF-8
+WORKING DIRECTORY: /home/andreww9/Desktop/Ensemble_AU_release/data/datasets/SynAU_generate/makehuman
+HOME LOCATION: /home/andreww9/Documents
+PYTHON PATH: ./:./lib:./apps:./shared:./apps/gui:./core:/home/andreww9/Desktop/Ensemble_AU_release/data/datasets/SynAU_generate/makehuman:/home/andreww9/anaconda3/envs/localMakeHuman/lib/python311.zip:/home/andreww9/anaconda3/envs/localMakeHuman/lib/python3.11:/home/andreww9/anaconda3/envs/localMakeHuman/lib/python3.11/lib-dynload:/home/andreww9/anaconda3/envs/localMakeHuman/lib/python3.11/site-packages
+DLL PATH: /home/andreww9/anaconda3/envs/localMakeHuman/bin:/home/andreww9/.local/bin:/home/andreww9/anaconda3/condabin:/home/andreww9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SYS.VERSION: 3.11.2 (main, Mar 27 2023, 23:42:44) [GCC 11.2.0]
+SYS.PLATFORM: linux
+SYS.EXECUTABLE: /home/andreww9/anaconda3/envs/localMakeHuman/bin/python3
+PLATFORM.MACHINE: x86_64
+PLATFORM.PROCESSOR: x86_64
+PLATFORM.UNAME.RELEASE: 6.8.0-45-generic
+PLATFORM.LINUX_DISTRIBUTION: Unknown
+NUMPY.VERSION: 1.24.2
+QT.VERSION: 5.15.2
+QT.JPG_SUPPORT: supported
+QT.SVG_SUPPORT: supported
+QT.PLUGIN_PATH: /home/andreww9/anaconda3/envs/localMakeHuman/lib/python3.11/site-packages/PyQt5/Qt5/plugins:/home/andreww9/anaconda3/envs/localMakeHuman/bin
+QT.PLUGIN_PATH_ENV: 
+QT.CONF: NOT PRESENT
+PYOPENGL.VERSION: 3.1.6
+NOSHADERS: not set
+NOSAMPLEBUFFERS: not set
+GL.VENDOR: AMD
+GL.RENDERER: OLAND (radeonsi, , LLVM 17.0.6, DRM 2.50, 6.8.0-45-generic)
+GL.VERSION: 4.5 (Compatibility Profile) Mesa 24.0.9-0ubuntu0.1
+GLSL.VERSION: 4.50
+GL.EXTENSION: GL_ARB_multisample not available (0x samples)
+GL.EXTENSION: GL_ARB_texture_non_power_of_two enabled

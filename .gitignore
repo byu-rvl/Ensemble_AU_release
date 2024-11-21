@@ -17,3 +17,4 @@ data/weights/stacking_head/BP4D/
 data/weights/stacking_head/DISFA/
 tmp_extracting/
 tmp_files/
+data/datasets/SynAU_generate/makehuman/out_allPeople/
