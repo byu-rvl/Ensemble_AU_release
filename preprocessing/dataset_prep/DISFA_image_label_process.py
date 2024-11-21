@@ -3,9 +3,14 @@
 import os
 import numpy as np
 from pathlib import Path
+import argparse
 
 #You nead downloading DISFA including 'ActionUnit_Labels'
-label_path = 'data/datasets/original/DISFA_/ActionUnit_Labels'
+parser = argparse.ArgumentParser(description='Face alignment and crop')
+parser.add_argument('--datasetPath', type=str, help='The path to the dataset')
+args = parser.parse_args()
+datasetPath = args.datasetPath
+label_path = datasetPath + '/ActionUnit_Labels'
 list_path_prefix = 'data/datasets/processed/DISFA_/list/'
 
 Path(list_path_prefix).mkdir(parents=True, exist_ok=True)

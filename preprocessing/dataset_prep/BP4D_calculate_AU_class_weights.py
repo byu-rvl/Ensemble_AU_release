@@ -2,7 +2,7 @@
 
 import numpy as np
 
-list_path_prefix = 'data/datasets/processed/BP4D/list/'
+list_path_prefix = 'data/datasets/BP4D/list/'
 
 '''
 example of content in 'BP4D_train_label_fold1.txt':

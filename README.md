@@ -89,11 +89,22 @@ Prerequisites:
 
 
 ```bash
-./scripts/mat_to_np.sh
-./scripts/cropFace_BP4D.sh path/to/BP4D/BP4D_imagesOnly
-./scripts/cropFace_DISFA.sh path/to/DISFA/Videos_LeftCamera
+./scripts/mat_to_np.sh path/to/DISFA/Videos_LeftCamera
 ./scripts/dataset_prep_BP4D.sh
 ./scripts/dataset_prep_DISFA.sh
+```
+
+Create a python environment with the following requirements to run the cropping to the face. 
+    - Python 3.6.4
+    - mxnet 1.2.0
+    - numpy 1.14.0
+    - scikit-image 0.14.0 
+    - python-opencv 3.4.3
+    - tqdm 4.28.1
+
+```bash
+./scripts/cropFace_BP4D.sh path/to/BP4D/BP4D_imagesOnly
+./scripts/cropFace_DISFA.sh path/to/DISFA/Videos_LeftCamera
 ```
 
 

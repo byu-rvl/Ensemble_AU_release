@@ -4,6 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 from pathlib import Path
+import argparse
 
 BP4D_Sequence_split = [['F001','M007','F018','F008','F002','M004','F010','F009','M012','M001','F016','M014','F023','M008'],
 					   ['M011','F003','M010','M002','F005','F022','M018','M017','F013','M016','F020','F011','M013','M005'],
@@ -14,8 +15,12 @@ BP4D_Sequence_split = [['F001','M007','F018','F008','F002','M004','F010','F009',
 # fold3:  train : part2+part3 test: part1
 
 tasks = ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8']
-label_folder = 'data/datasets/original/BP4D/AU_OCC'
-list_path_prefix = 'data/datasets/processed/BP4D/list/'
+parser = argparse.ArgumentParser(description='Face alignment and crop')
+parser.add_argument('--datasetPath', type=str, help='The path to the dataset')
+args = parser.parse_args()
+datasetPath = args.datasetPath
+label_folder = datasetPath + '/AUCoding/AU_OCC'
+list_path_prefix = 'data/datasets/BP4D/list/'
 
 Path(list_path_prefix).mkdir(parents=True, exist_ok=True)
 

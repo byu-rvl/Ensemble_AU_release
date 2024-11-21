@@ -1,1 +1,1 @@
-python preprocessing/mat_to_np.py
+python preprocessing/mat_to_np.py --allLmkPontsDisfa $1

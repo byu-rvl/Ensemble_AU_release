@@ -17,9 +17,7 @@ import mat73
 import numpy as np
 
 def crop_align_face_BP4D(input_dir):
-    # output_dir = "./data/datasets/processed/BP4D/"
-    # lmk_data_path = Path("./data/datasets/original/BP4D/2DFeatures")
-    output_dir = "/home/andreww9/groups/grp_ensembleAU/nobackup/autodelete/data/datasets/processed/BP4D/"
+    output_dir = "./data/datasets/BP4D/"
     lmk_data_path = None
     Path(output_dir).mkdir(parents=True, exist_ok=True)
     face_size = "256" 
@@ -142,11 +140,11 @@ def crop_align_face_BP4D(input_dir):
                 break
 
 def crop_align_face_DISFA(input_dir):
-    output_dir = "./data/datasets/processed/DISFA_/"
+    output_dir = "./data/datasets/DISFA/"
     lmk_data_path = Path("./data/datasets/original/DISFA_/Landmark_Points_np") #TODO figure out the np file.
     face_size = "256"  
 
-    allSubjects = list(glob.glob(str(input_dir) + "/**"))
+    allSubjects = list(glob.glob(str(input_dir) + "/Videos_LeftCamera/**"))
     print("len(allSubjects): ", len(allSubjects))
 
     for vidPath in allSubjects:

@@ -3,8 +3,7 @@
 import numpy as np
 import os
 
-# list_path = 'data/datasets/processed/BP4D/list'
-list_path = '/fslhome/andreww9/code/original_datasets/BP4D_croppped_MTCNN/list'
+list_path = 'data/datasets/BP4D/list'
 class_num = 12
 
 for i in range(1,4):

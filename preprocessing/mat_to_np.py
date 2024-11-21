@@ -4,6 +4,7 @@ import os
 import numpy as np
 from pathlib import Path
 import tqdm
+import argparse
 
 def mat_to_np(mat_file):   
     mat_file = io.loadmat(mat_file)
@@ -12,8 +13,12 @@ def mat_to_np(mat_file):
     return pts
 
 if __name__ == "__main__":
-    allLmkPontsDisfa = "data/datasets/original/DISFA_/Landmark_Points"
-    saveLocation = Path("data/datasets/original/DISFA_/Landmark_Points_np_test")
+    
+    parser = argparse.ArgumentParser(description='Face alignment and crop')
+    parser.add_argument('--allLmkPontsDisfa', type=str, help='The path to the dataset')
+    args = parser.parse_args()
+    allLmkPontsDisfa = args.allLmkPontsDisfa + "/Landmark_Points"
+    saveLocation = Path("data/datasets/original/DISFA_/Landmark_Points_np")
 
     allLmkPontsDisfa = list(glob.glob(allLmkPontsDisfa + "/**/**/*.mat"))
     allLmkPontsDisfa.sort()

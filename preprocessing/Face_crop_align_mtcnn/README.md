@@ -6,7 +6,7 @@ Crop and Align Face by MTCNN
 
 ## Environment
 
-1. The test environment is
+1. Create a python environment with these details:
     - Python 3.6.4
     - mxnet 1.2.0
     - numpy 1.15.0
