@@ -20,6 +20,9 @@ def decompress_gz_files(source_dir, dest_dir, extensions):
     print("Decompressing .gz files...")
     print("Source directory:", source_dir)
     print("Destination directory:", dest_dir)
+    if not Path(source_dir).exists():
+        print("Source directory does not exist. Please download the correct files from the online repository. (This needs to be done seperatly from downloading all the code.)")
+        return
 
     # Loop through all files in the source directory
     for root, _, files in os.walk(source_dir):
@@ -55,6 +58,10 @@ def expand_tar_files(source_dir, dest_dir):
     print("Expanding .tar files...")
     print("Source directory:", source_dir)
     print("Destination directory:", dest_dir)
+
+    if not Path(source_dir).exists():
+        print("Source directory does not exist. Please download the correct files from the online repository. (This needs to be done seperatly from downloading all the code.)")
+        return
 
     # Loop through all files in the source directory
     for root, _, files in os.walk(source_dir):

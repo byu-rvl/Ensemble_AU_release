@@ -4,14 +4,13 @@
 
 Borda Ranking with Synthetic Data and Ensembles for Facial Action Unit Recognition
 
-Author names here (removed for blind review)
+Andrew Sumsion, Dah-Jye Lee
 
 ## Guide to running the code:
 
 As the code is rather large, we provide descriptions of possible desired tasks in different sections. Each section is outlined here. 
 
 Section outlines:
-0. Download this github repo.
 1. Download model parameters: Information about what is included and what/why it is not included in this CVPR anonymous review.
 2. Conda environment: Instructions for setting up a conda environment.
 3. Uncompress all: Instructions to uncompress the necessary files before running the various tests below.
@@ -21,32 +20,19 @@ Section outlines:
 7. SynAU dataset: Instructions for viewing the SynAU dataset.
 8. SynAU dataset generation: Instructions for generating the SynAU dataset and additional data.
 
-## 0. Download this github repo.
-
-Linux:
-```bash
-sudo apt install git-lfs
-git lfs install
-git clone THIS_REPO
-```
-
-If you desire to run any code, you need to do a git clone and not download the zip file. If you only desire to look at the code, downloading the zip file will work. This is because the data is included with git LFS which will only download the files using git clone. 
-
-There is ~50G in the initial download. You will need an additional ~100G to run the full uncompress all. If one does not have enough storage for this, they may modify the preprocessing/uncompress_all.py to only uncompress those items that are needed for the desired task. Also, after the initial cloning, large files that one does not plan to use may be deleted.
-
-We explain the need for the large files in this github repo in Section 1 (Download model parameters) below.
-
 ## 1. Download model parameters:
 
-To respect the November 7, 2024 update from CVPR, we include the following large files in our repository:
+We follow the November 7, 2024 update from CVPR and not provide any external links.
+
+#### CVPR November 7, 2024 update: 
+"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024 from Link: https://cvpr.thecvf.com/Conferences/2025/Clarification)
+
+To respect the November 7, 2024 update from CVPR, we include the following large files in our repository using Github LFS. However, as we are required to submit with an anonymous github, we encourage the reviewers to download these files depending on what they desire to test:
 - Each base leaners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed)
 - Each base leaners' predictions for the DISFA dataset (See: data/predictions/DISFA_compressed)
 - Model weights for the stacking head (MoE) on the BP4D dataset (See: data/weights/stacking_head/BP4D_compressed)
 - Model weights for the stacking head (MoE) on the DISFA dataset (See: data/weights/stacking_head/DISFA_compressed)
 - The SynAU dataset (See: data/datasets/SynAU_compressed)
-
-#### CVPR November 7, 2024 update: 
-"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024 from Link: https://cvpr.thecvf.com/Conferences/2025/Clarification)
 
 Upon acceptance, we will release our code publically. We will release all large files linked to an external website, rather than the inclusion within the git repository. We see the inclusion of the large files in github to be inefficient for downloading the code. In addition to the above mentioned large files, we will also release:
 - Model weights for each base learner on the BP4D dataset
@@ -72,6 +58,7 @@ python preprocessing/uncompress_all.py
 
 ## 4. Testing the stacking head:
 Prerequisites: 
+- Download the following: (DISFA: data/predictions/DISFA_compressed, data/weights/stacking_head/DISFA_compressed) or (BP4D:data/predictions/BP4D_compressed, data/weights/stacking_head/BP4D_compressed)
 - Conda environment (created and activated).
 - Uncompress all.
 
@@ -232,6 +219,6 @@ Note: We acknowledge the slight discrepancy between a few reported numbers here 
 @misc{yourproject2024,
   author = {Removed for blind review},
   title = {Borda Ranking with Synthetic Data and Ensembles for Facial Action Unit Recognition},
-  year = {TO BE FILLED AFTER ACCEPTANCE/PUBLICATION.},
-  publisher = {TO BE FILLED AFTER ACCEPTANCE/PUBLICATION.}
+  year = {TO BE FILLED AFTER ACCEPTANCE.},
+  publisher = {TO BE FILLED AFTER ACCEPTANCE.}
 }
