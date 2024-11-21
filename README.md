@@ -25,7 +25,7 @@ Section outlines:
 We follow the November 7, 2024 update from CVPR and not provide any external links.
 
 #### CVPR November 7, 2024 update: 
-"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024 from Link: https://cvpr.thecvf.com/Conferences/2025/Clarification)
+"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024)
 
 To respect the November 7, 2024 update from CVPR, we include the following large files in our repository using Github LFS. However, as we are required to submit with an anonymous github, we encourage the reviewers to download these files depending on what they desire to test:
 - Each base leaners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed)
