@@ -1,4 +1,4 @@
-from rvl_parameters import *
+from synAU_parameters import *
 
 PERSON_000 = {}
 PERSON_000[PEOPLE_NAME_KEY] = "PERSON_000"

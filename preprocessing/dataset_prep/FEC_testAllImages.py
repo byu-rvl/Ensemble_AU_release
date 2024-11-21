@@ -4,8 +4,8 @@ import tqdm
 import os
 
 if __name__ == "__main__":
-    # testFiles = "/home/andreww9/fsl_groups/grp_AU_storage/compute/FEC_dataset_downloader/train_images"
-    testFiles = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images"
+    # testFiles = "/rootpath/grp_AU_storage/compute/FEC_dataset_downloader/train_images"
+    testFiles = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/test_images"
     allImages = list(glob.glob(testFiles + "/**"))
 
     allNone = []

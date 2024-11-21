@@ -1,7 +1,7 @@
 import random
 
 
-class rvl_generatePeople:
+class synAU_generatePeople:
     def __init__(self, numPeople):
         self.numPeople = numPeople
         self.options_clothes = ["CARGO_PANTS_FILE", "JEAN_SHORTS_FILE", "POLO_SHIRT_FILE"]
@@ -95,5 +95,5 @@ class rvl_generatePeople:
 
 if __name__ == "__main__":
     numPeople = 200
-    helper = rvl_generatePeople(numPeople)
+    helper = synAU_generatePeople(numPeople)
     helper.makePeople()

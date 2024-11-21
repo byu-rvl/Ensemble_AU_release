@@ -6,11 +6,11 @@ from pathlib import Path
 import glob
 
 if __name__ == "__main__":
-    # csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-train-public.xlsx"
-    # save_csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train_images_with_index.csv"
+    # csvFile = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-train-public.xlsx"
+    # save_csvFile = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/train_images_with_index.csv"
     # index_url = np.load("index_url.npy", allow_pickle=True).item()
-    csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-test-public.xlsx"
-    save_csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images_with_index.csv"
+    csvFile = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-test-public.xlsx"
+    save_csvFile = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/test_images_with_index.csv"
     index_url = np.load("test_index_url.npy", allow_pickle=True).item()
     
 

@@ -63,10 +63,10 @@ class FEC(Dataset):
         self._root_path = root_path
         self._train = train
         if train:
-            self.img_folder_path = "/home/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train_images"
+            self.img_folder_path = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/train_images"
             # self.img_folder_path = "/tmp/" + str(conf.jobID) + "/train_images"
         else:
-            self.img_folder_path = "/home/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images"
+            self.img_folder_path = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/test_images"
             # self.img_folder_path = "/tmp/" + str(conf.jobID) + "/test_images"
         self._transform = transform
         self.crop_size = crop_size

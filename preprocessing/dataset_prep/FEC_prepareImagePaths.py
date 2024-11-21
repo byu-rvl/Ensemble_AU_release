@@ -6,17 +6,17 @@ from pathlib import Path
 import glob
 
 if __name__ == "__main__":
-    # imagePaths = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train_images/"
-    # csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train_images_with_index.csv"
+    # imagePaths = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/train_images/"
+    # csvFile = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/train_images_with_index.csv"
     # saveName = "FEC_train"
     # index_url_path = "index_url.npy"
-    imagePaths = "/home/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images/"
-    csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images_with_index.csv"
+    imagePaths = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/test_images/"
+    csvFile = "/rootpath/grp_AU_storage/code/FEC_dataset_downloader/test_images_with_index.csv"
     saveName = "FEC_test"
     index_url_path = "test_index_url.npy"
 
     index_url = np.load(index_url_path, allow_pickle=True).item()
-    saveDir = "/home/andreww9/code/original_datasets/FEC_dataset2/list/"
+    saveDir = "/home/username/code/original_datasets/FEC_dataset2/list/"
     
     Path(saveDir).mkdir(parents=True, exist_ok=True)
 

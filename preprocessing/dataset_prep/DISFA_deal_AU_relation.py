@@ -3,8 +3,7 @@
 import numpy as np
 import os
 
-# list_path = 'data/datasets/processed/DISFA_/list'
-list_path = '/home/andreww9/groups/grp_RVL_AU/code/DISFA_LEFT_cropped_MTCNN/list'
+list_path = 'data/datasets/processed/DISFA_/list'
 class_num = 8
 
 for i in range(1,4):

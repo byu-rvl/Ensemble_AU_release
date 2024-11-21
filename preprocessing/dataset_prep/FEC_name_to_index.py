@@ -7,15 +7,15 @@ import glob
 import sys
 
 if __name__ == "__main__":
-    # imagePaths = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train/"
-    # csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train_images_with_index.csv"
-    # csvFile2 = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-train-public.xlsx"
-    # savePath = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/train_images/"
+    # imagePaths = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/train/"
+    # csvFile = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/train_images_with_index.csv"
+    # csvFile2 = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-train-public.xlsx"
+    # savePath = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/train_images/"
     # indexURL_path = "index_url.npy"
-    imagePaths = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test/"
-    csvFile = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images_with_index.csv"
-    csvFile2 = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-test-public.xlsx"
-    savePath = "/fslhome/andreww9/fsl_groups/grp_AU_storage/code/FEC_dataset_downloader/test_images/"
+    imagePaths = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/test/"
+    csvFile = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/test_images_with_index.csv"
+    csvFile2 = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/faceexp-comparison-data-test-public.xlsx"
+    savePath = "/root_path//grp_AU_storage/code/FEC_dataset_downloader/test_images/"
     indexURL_path = "test_index_url.npy"
 
     if not Path(indexURL_path).exists():

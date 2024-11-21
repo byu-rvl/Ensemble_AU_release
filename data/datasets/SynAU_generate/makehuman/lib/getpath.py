@@ -39,7 +39,7 @@ Utility module for finding the user home path.
 import sys
 import os
 from xdg_parser import XDG_PATHS
-from rvl_parameters import *
+from synAU_parameters import *
 
 __home_path = None
 

@@ -1,8 +1,31 @@
-Note: Drew Sumsion found the majority of this code is from the makehuman repository. 
+# SynAU Generation
+
+## Instructions
+1. create conda environment:
+ (note: need to be in the data/datasets/SynAU_generate directory.)
+```bash
+conda env create -f ennvironment.yml
+```
+
+2. activate conda environment:
+
+```bash
+conda activate localMakeHuman
+```
+
+3. generate data:
+
+```bash
+./makehuman/makehuman
+```
+
+## Other information
+
+Note: NAME REMOVED FOR ANONYMOUS REVIEW found the majority of this code is from the makehuman repository. 
 Makehuman repository: https://github.com/makehumancommunity/makehuman/tree/master/makehuman
 Their commit tag that I branched off of: f8ff3bc54874216a204b2f5f19dc404c86bb0565
 Their code contributed the following:
-- The GUI (trying to disable it)
+- The GUI (mostly disabled it)
 - The actual body build.
 - The majority of the current code.
 

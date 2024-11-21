@@ -26,7 +26,7 @@
 import camera
 from OpenGL.GL import *
 import numpy as np
-import cv2 #rvl added this.
+import cv2 #synAU added this.
 import random
 from pathlib import Path
 
@@ -50,11 +50,11 @@ import image_operations as imgop
 # import guirender
 from core import G
 from progress import Progress
-from rvl_parameters import *
+from synAU_parameters import *
 import proxy
 import gui3d
 
-from rvl_parameters_people import *
+from synAU_parameters_people import *
 
 
 ##########################################################################
@@ -120,7 +120,7 @@ class FACSHumanTaskView2(gui3d.TaskView):
         box_images_rendering = self.addRightWidget(gui.GroupBox('Images set creation'))
         box_animation = self.addRightWidget(gui.GroupBox('Animation'))
         box_videos_rendering = self.addRightWidget(gui.GroupBox('Video creation'))
-        rvl_creation = self.addRightWidget(gui.GroupBox('RVL Creation'))
+        synAU_creation = self.addRightWidget(gui.GroupBox('synAU Creation'))
 
 ##########################################################################
 # Widgets definitions for Box Tools
@@ -138,8 +138,8 @@ class FACSHumanTaskView2(gui3d.TaskView):
         self.txt_coding = box_aus_code.addWidget(gui.TextView('AU\'s code generated :'), columnSpan = 2)
         self.au_coding = box_aus_code.addWidget(gui.DocumentEdit(text='Neutral'), columnSpan = 2)
 
-        # rvl additions:
-        self.rvl_generate_images_set_button = rvl_creation.addWidget(gui.Button('Generate'))
+        # synAU additions:
+        self.synAU_generate_images_set_button = synAU_creation.addWidget(gui.Button('Generate'))
 
 # Tools box
         self.reset_camera_button = box_tools.addWidget(gui.Button('Full face camera view'), columnSpan = 2)
@@ -485,20 +485,20 @@ class FACSHumanTaskView2(gui3d.TaskView):
 
 
 ################################################################################
-#RVL EVENT FUNCTIONS
+#synAU EVENT FUNCTIONS
 ################################################################################
-        @self.rvl_generate_images_set_button.mhEvent
+        @self.synAU_generate_images_set_button.mhEvent
         def onClicked(event):
             self.makeAllVideos()
 
 ##########################################################################
-# Functions for RVL updates to generate data using the gui.
+# Functions for synAU updates to generate data using the gui.
 ##########################################################################
 
-    def rvl_update_slider(self, slider_string, newValue):
+    def synAU_update_slider(self, slider_string, newValue):
         # the slider_string should be a string. A list of them can be found by printing out self.sliders.keys()
         # newValue should be a value between 0 and 10
-        # print("enters rvl_update_slider", newValue)
+        # print("enters synAU_update_slider", newValue)
         self.sliders[slider_string].setValue(newValue)
         self.sliders[slider_string]._onChange()
         self.sliders[slider_string].update()
@@ -525,7 +525,7 @@ class FACSHumanTaskView2(gui3d.TaskView):
 
         #pass keys in as a list
         for i in range(0, len(keys)):
-            self.rvl_update_slider(keys[i], intensities[i])
+            self.synAU_update_slider(keys[i], intensities[i])
 
         #these lines copied from other format to save image.
         img_width, img_height = int(self.renderingWidth), int(self.renderingHeight)
@@ -545,7 +545,7 @@ class FACSHumanTaskView2(gui3d.TaskView):
 
         return cvImage
 
-    def rvl_resetCamera(self):
+    def synAU_resetCamera(self):
         # NOTE this was in a click function and I moved it here so I can reset the camera to the correct location when we start.
         gui3d.app.setTargetCamera(131, 9, False)
         gui3d.app.axisView([0.0, 0.0, 0.0])
@@ -561,7 +561,7 @@ class FACSHumanTaskView2(gui3d.TaskView):
         gui3d.app.statusPersist('Camera updated')
 
     def makeSingleVideo(self, movementsInVideo, thisSaveDir, personIndx):
-        self.rvl_resetCamera()  # move camera to be straight on the face only. No zoomed in on the body.
+        self.synAU_resetCamera()  # move camera to be straight on the face only. No zoomed in on the body.
         #To make each video reproducable, with the randomness, we set the random seed each making of videos.
         #note for in the future. If you want to have each person do it uniquely, you could change this seed to also
         #incorporate who the user is.
@@ -611,7 +611,7 @@ class FACSHumanTaskView2(gui3d.TaskView):
 
 
     def makeOneVideo(self, movementsInVideo, thisSaveDir, personIndx):
-        self.rvl_resetCamera()  # move camera to be straight on the face only. No zoomed in on the body.
+        self.synAU_resetCamera()  # move camera to be straight on the face only. No zoomed in on the body.
         #To make each video reproducable, with the randomness, we set the random seed each making of videos.
         #note to shad in the future. If you want to have each person do it uniquely, you could change this seed to also
         #incorporate who the user is.

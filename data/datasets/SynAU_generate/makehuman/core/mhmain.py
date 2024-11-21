@@ -58,7 +58,7 @@ import log
 import contextlib
 
 from mhversion import MHVersion
-from rvl_parameters import *
+from synAU_parameters import *
 
 @contextlib.contextmanager
 def outFile(path):

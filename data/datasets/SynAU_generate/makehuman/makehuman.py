@@ -47,8 +47,8 @@ import re
 import subprocess
 
 from PyQt5 import QtCore
-from rvl_parameters import *
-from rvl_parameters_people import *
+from synAU_parameters import *
+from synAU_parameters_people import *
 from xvfbwrapper import Xvfb
 
 ## Version information #########################################################
