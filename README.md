@@ -8,6 +8,11 @@ Andrew Sumsion, Dah-Jye Lee
 
 ## Guide to running the code:
 
+NOTE PLEASE READ: As anonymous Github does not allow one to download or access Github LFS files (see issue #95 on the anonymous_github repo) and CVPR only allows a link to anonymous github repositories, much of the code is unrunnable. This is due to the inability to provide model parameters or the base model predictions through an anonymous github. The one exception is the SynAU dataset generation which can be run independently. We will publicly release all the attached code and the referred to model weights. We apologize to the reviewers of the inability to run all our code with the limitations from the CVPR Nov 7, 2024 limitations. (See next paragraph) We also assure reviewers that the code was properly run and tested as we were ready to provide all the below code and weights up till we put it through the anonymous github repo, following the CVPR instructions.
+
+#### CVPR November 7, 2024 update: 
+"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024)
+
 As the code is rather large, we provide descriptions of possible desired tasks in different sections. Each section is outlined here. 
 
 Section outlines:
@@ -22,19 +27,14 @@ Section outlines:
 
 ## 1. Download model parameters:
 
-We follow the November 7, 2024 update from CVPR and not provide any external links.
-
-#### CVPR November 7, 2024 update: 
-"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024)
-
 To respect the November 7, 2024 update from CVPR, we include the following large files in our repository using Github LFS. However, as we are required to submit with an anonymous github, we encourage the reviewers to download these files depending on what they desire to test:
-- Each base leaners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed)
-- Each base leaners' predictions for the DISFA dataset (See: data/predictions/DISFA_compressed)
-- Model weights for the stacking head (MoE) on the BP4D dataset (See: data/weights/stacking_head/BP4D_compressed)
-- Model weights for the stacking head (MoE) on the DISFA dataset (See: data/weights/stacking_head/DISFA_compressed)
-- The SynAU dataset (See: data/datasets/SynAU_compressed)
+- Each base learners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
+- Each base learners' predictions for the DISFA dataset (See: data/predictions/DISFA_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
+- Model weights for the stacking head (MoE) on the BP4D dataset (See: data/weights/stacking_head/BP4D_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
+- Model weights for the stacking head (MoE) on the DISFA dataset (See: data/weights/stacking_head/DISFA_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
+- The SynAU dataset (See: data/datasets/SynAU_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
 
-Upon acceptance, we will release our code publically. We will release all large files linked to an external website, rather than the inclusion within the git repository. We see the inclusion of the large files in github to be inefficient for downloading the code. In addition to the above mentioned large files, we will also release:
+Upon acceptance, we will release our code publicly. We will release all large files linked to an external website, rather than the inclusion within the git repository. We see the inclusion of the large files in github to be inefficient for downloading the code. In addition to the above mentioned large files, we will also release:
 - Model weights for each base learner on the BP4D dataset
 - Model weights for each base learner on the DISFA dataset
 
@@ -44,11 +44,13 @@ Assumed prerequisites:
 
 
 ```bash
-conda env create -f ennvironment.yml
+conda env create -f environment.yml
 ```
 
 
 ## 3. Uncompress all:
+UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. Instead of uncompressing the files, it will return an error stating that the compressed files are corrupted.
+
 Prerequisites:
 - Conda environment (created and activated).
 
@@ -57,6 +59,7 @@ python preprocessing/uncompress_all.py
 ```
 
 ## 4. Testing the stacking head:
+UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites: 
 - Download the following: (DISFA: data/predictions/DISFA_compressed, data/weights/stacking_head/DISFA_compressed) or (BP4D:data/predictions/BP4D_compressed, data/weights/stacking_head/BP4D_compressed)
 - Conda environment (created and activated).
@@ -76,6 +79,7 @@ DISFA:
 ```
 
 ## 5. Preprocessing:
+UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites:
 - Conda environment.
 - Uncompress all.
@@ -104,6 +108,7 @@ Create a python environment with the following requirements to run the cropping 
 
 
 ## 6. Testing the base learners:
+UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites: 
 - Conda environment.
 - Uncompress all.
@@ -126,12 +131,14 @@ DISFA (baselearners options 0-46):
 
 
 ## 7. SynAU dataset:
+UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites:
 - Uncompress all.
 
 View dataset in data/datasets/SynAU directory. 
 
 ## 8. Generate SynAU dataset:
+UPDATE: We have validated that this code still works regardless of being anonymized in the github repo.
 
 The code for generating the SynAU dataset is in the data/datasets/SynAU_generate directory. The data/datasets/SynAU_generate/README.md provides the necessary information used to generate the SynAU dataset and more.
 

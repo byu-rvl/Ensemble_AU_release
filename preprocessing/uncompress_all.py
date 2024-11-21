@@ -85,25 +85,25 @@ def expand_tar_files(source_dir, dest_dir):
 
 file_extensions = ('.tar.gz', '.pt.gz', '.pth.gz')  # Specify the file extensions to decompress
 
-# source_directory = "data/weights/stacking_head/BP4D_compressed/"
-# destination_directory = "data/weights/stacking_head/BP4D"
-# decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
+source_directory = "data/weights/stacking_head/BP4D_compressed/"
+destination_directory = "data/weights/stacking_head/BP4D"
+decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
 
-# source_directory = "data/weights/stacking_head/DISFA_compressed/"
-# destination_directory = "data/weights/stacking_head/DISFA"
-# decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
+source_directory = "data/weights/stacking_head/DISFA_compressed/"
+destination_directory = "data/weights/stacking_head/DISFA"
+decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
 
-# source_directory = "data/predictions/BP4D_compressed"
-# destination_directory = "data/predictions/BP4D"
-# decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
+source_directory = "data/predictions/BP4D_compressed"
+destination_directory = "data/predictions/BP4D"
+decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
 
-# source_directory = "data/predictions/DISFA_compressed"
-# destination_directory = "data/predictions/DISFA"
-# decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
+source_directory = "data/predictions/DISFA_compressed"
+destination_directory = "data/predictions/DISFA"
+decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
 
-# source_directory = "data/datasets/SynAU_compressed"
-# destination_directory = "data/datasets/SynAU_tar"
-# decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
+source_directory = "data/datasets/SynAU_compressed"
+destination_directory = "data/datasets/SynAU_tar"
+decompress_gz_files(source_directory, destination_directory, extensions=file_extensions)
 
 source_directory = "data/datasets/SynAU_tar"
 destination_directory = "data/datasets/SynAU_expanded"

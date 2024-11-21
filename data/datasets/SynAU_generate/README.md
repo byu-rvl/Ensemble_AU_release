@@ -4,7 +4,7 @@
 1. create conda environment:
  (note: need to be in the data/datasets/SynAU_generate directory.)
 ```bash
-conda env create -f ennvironment.yml
+conda env create -f environment.yml
 ```
 
 2. activate conda environment:
@@ -13,7 +13,15 @@ conda env create -f ennvironment.yml
 conda activate localMakeHuman
 ```
 
-3. generate data:
+3. grant access to the bash script
+(note: need to be in the data/datasets/SynAU_generate directory.)
+
+```bash
+chmod +777 ./makehuman/makehuman
+```
+
+4. generate data:
+(note: need to be in the data/datasets/SynAU_generate directory.)
 
 ```bash
 ./makehuman/makehuman
@@ -21,7 +29,7 @@ conda activate localMakeHuman
 
 The data will be output in Ensemble_AU_release/data/datasets/SynAU_generate/makehuman/out_allPeople/
 
-4. modify any generation data
+5. modify any generation data
 
 Change the parameters in the following files:
 - Ensemble_AU_release/data/datasets/SynAU_generate/makehuman/synAU_parameters_people.py (simply follow the pattern for people and add the person to the list at the end of the file)
