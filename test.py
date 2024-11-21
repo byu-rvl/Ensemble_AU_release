@@ -23,14 +23,14 @@ from torchmetrics.classification import BinaryCalibrationError
 def get_dataloader(conf):
     print('==> Preparing data...')
     if conf.dataset == 'BP4D':
-        datasetPath = "data/predictions/BP4D_computeLocal"
+        datasetPath = "data/predictions/BP4D"
         allResults = "whichPredictions_fold"
         training_data = ensemble_dataset(datasetPath, conf.fold, train=True, allResults=allResults, jobID=conf.jobID, dataset="BP4D", root_path=conf.dataset_path)
         valset = ensemble_dataset(datasetPath, conf.fold, train=False, train_dataPath=training_data.dataset_path, allResults=allResults, jobID=conf.jobID, returnPath=True, dataset="BP4D", root_path=conf.dataset_path)
         val_loader = DataLoader(valset, batch_size=conf.batch_size, shuffle=False, num_workers=conf.num_workers)
 
     elif conf.dataset == 'DISFA':
-        datasetPath = "data/predictions/DISFA_computeLocal"
+        datasetPath = "data/predictions/DISFA"
         allResults = "whichPredictions_fold"
         includeLambda = False
         training_data = ensemble_dataset(datasetPath, conf.fold, train=True, allResults=allResults, jobID=conf.jobID, dataset="DISFA", root_path=conf.dataset_path)
