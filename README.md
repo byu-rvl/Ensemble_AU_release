@@ -22,6 +22,13 @@ Section outlines:
 
 ## 0. Download this github repo.
 
+Linux:
+```bash
+sudo apt install git-lfs
+git lfs install
+git clone THIS_REPO
+```
+
 If you desire to run any code, you need to do a git clone and not download the zip file. If you only desire to look at the code, downloading the zip file will work. This is because the data is included with git LFS which will only download the files using git clone. 
 
 There is ~50G in the initial download. You will need an additional ~100G to run the full uncompress all. If one does not have enough storage for this, they may modify the preprocessing/uncompress_all.py to only uncompress those items that are needed for the desired task. Also, after the initial cloning, large files that one does not plan to use may be deleted.
