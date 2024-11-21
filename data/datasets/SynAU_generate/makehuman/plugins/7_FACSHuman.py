@@ -613,7 +613,7 @@ class FACSHumanTaskView2(gui3d.TaskView):
     def makeOneVideo(self, movementsInVideo, thisSaveDir, personIndx):
         self.synAU_resetCamera()  # move camera to be straight on the face only. No zoomed in on the body.
         #To make each video reproducable, with the randomness, we set the random seed each making of videos.
-        #note to shad in the future. If you want to have each person do it uniquely, you could change this seed to also
+        #note to others in the future. If you want to have each person do it uniquely, you could change this seed to also
         #incorporate who the user is.
         movementsInVideo.sort()
         random.seed(personIndx)
