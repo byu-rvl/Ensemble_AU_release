@@ -18,7 +18,8 @@ Section outlines:
 4. Testing the stacking head: Instructions to validate the final results reported in the paper. (Do not need to run the base learners prior to this step. We include each of the base learners' predictions saved in data/predictions.)
 5. Preprocessing: The necessary preprocessing to run each of the base learners.
 6. Testing the base learners: Instructions for validating the base learners.
-7. SynAU dataset: Instructions for viewing the SynAU dataset and the code used to generate the SynAU dataset.
+7. SynAU dataset: Instructions for viewing the SynAU dataset.
+8. SynAU dataset generation: Instructions for generating the SynAU dataset and additional data.
 
 ## 0. Download this github repo.
 
@@ -141,7 +142,11 @@ DISFA (baselearners options 0-46):
 Prerequisites:
 - Uncompress all.
 
-View dataset in data/datasets/SynAU directory. To look at the code to generate the SynAU dataset please look in the data/datasets/SynAU_generate directory. The data/datasets/SynAU_generate/README.md provides the necessary information used to generate the SynAU dataset and more.
+View dataset in data/datasets/SynAU directory. 
+
+## 8. Generate SynAU dataset:
+
+The code for generating the SynAU dataset is in the data/datasets/SynAU_generate directory. The data/datasets/SynAU_generate/README.md provides the necessary information used to generate the SynAU dataset and more.
 
 
 ## Architecture Overview:

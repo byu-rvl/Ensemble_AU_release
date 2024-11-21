@@ -19,6 +19,14 @@ conda activate localMakeHuman
 ./makehuman/makehuman
 ```
 
+The data will be output in Ensemble_AU_release/data/datasets/SynAU_generate/makehuman/out_allPeople/
+
+4. modify any generation data
+
+Change the parameters in the following files:
+- Ensemble_AU_release/data/datasets/SynAU_generate/makehuman/synAU_parameters_people.py (simply follow the pattern for people and add the person to the list at the end of the file)
+- Ensemble_AU_release/data/datasets/SynAU_generate/makehuman/synAU_parameters.py (for additional control such as save path)
+
 ## Other information
 
 Note: NAME REMOVED FOR ANONYMOUS REVIEW found the majority of this code is from the makehuman repository. 
