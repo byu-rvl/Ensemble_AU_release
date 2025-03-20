@@ -1,2 +1,0 @@
-*.pt.gz filter=lfs diff=lfs merge=lfs -text
-PERSON*.tar.gz filter=lfs diff=lfs merge=lfs -text
