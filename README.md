@@ -22,7 +22,7 @@ Section outlines:
 
 ## 1. Download model parameters:
 
-Each of these can be downloaded from the huggingface repository at: 
+Each of these can be downloaded from the huggingface repository at: https://huggingface.co/datasets/dwsum/Syn_AU
 - Each base learners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed)
 - Each base learners' predictions for the DISFA dataset (See: data/predictions/DISFA_compressed)
 - Model weights for the stacking head (MoE) on the BP4D dataset (See: data/weights/stacking_head/BP4D_compressed)
