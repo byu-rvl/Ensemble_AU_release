@@ -1,22 +1,17 @@
-# Borda Ranking with Synthetic Data and Ensembles for Facial Action Unit Recognition
+# A Meta-Learner Based on the Combination of Stacking Ensembles and a Mixture of Experts for Balancing Action Unit Recognition
 
 ![The Need for Borda](images/borda_side_by_side.jpg)
 
-Borda Ranking with Synthetic Data and Ensembles for Facial Action Unit Recognition
+A Meta-Learner Based on the Combination of Stacking Ensembles and a Mixture of Experts for Balancing Action Unit Recognition
 
 Andrew Sumsion, Dah-Jye Lee
 
 ## Guide to running the code:
 
-NOTE PLEASE READ: As anonymous Github does not allow one to download or access Github LFS files (see issue #95 on the anonymous_github repo) and CVPR only allows a link to anonymous github repositories, much of the code is unrunnable. This is due to the inability to provide model parameters or the base model predictions through an anonymous github. The one exception is the SynAU dataset generation which can be run independently. We will publicly release all the attached code and the referred to model weights. We apologize to the reviewers of the inability to run all our code with the limitations from the CVPR Nov 7, 2024 limitations. (See next paragraph) We also assure reviewers that the code was properly run and tested as we were ready to provide all the below code and weights up till we put it through the anonymous github repo, following the CVPR instructions.
-
-#### CVPR November 7, 2024 update: 
-"Please note a small change in the author guidelines compared to CVPR 2024: we no longer allow any links to external websites in the supplementary material unless it is to an anonymous GitHub repository. This is because we cannot track external links without a third-party timestamp to make sure no new material is updated after the supplementary material deadline. In previous conferences, this was already highly discouraged, but CVPR 2025 decides to disallow it to avoid potential misuse." (cited on Nov 20, 2024)
-
 As the code is rather large, we provide descriptions of possible desired tasks in different sections. Each section is outlined here. 
 
 Section outlines:
-1. Download model parameters: Information about what is included and what/why it is not included in this CVPR anonymous review.
+1. Download model parameters.
 2. Conda environment: Instructions for setting up a conda environment.
 3. Uncompress all: Instructions to uncompress the necessary files before running the various tests below.
 4. Testing the stacking head: Instructions to validate the final results reported in the paper. (Do not need to run the base learners prior to this step. We include each of the base learners' predictions saved in data/predictions.)
@@ -27,16 +22,12 @@ Section outlines:
 
 ## 1. Download model parameters:
 
-To respect the November 7, 2024 update from CVPR, we include the following large files in our repository using Github LFS. However, as we are required to submit with an anonymous github, we encourage the reviewers to download these files depending on what they desire to test:
-- Each base learners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
-- Each base learners' predictions for the DISFA dataset (See: data/predictions/DISFA_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
-- Model weights for the stacking head (MoE) on the BP4D dataset (See: data/weights/stacking_head/BP4D_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
-- Model weights for the stacking head (MoE) on the DISFA dataset (See: data/weights/stacking_head/DISFA_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
-- The SynAU dataset (See: data/datasets/SynAU_compressed) (UPDATE: due to CVPR's limitations to use anonymous github repositories exclusively, and the inability for large files to be incorporated, the files at this location are not the files on our github repository. We apologize for any inconvenience we attempt to follow all CVPR instructions for submission.)
-
-Upon acceptance, we will release our code publicly. We will release all large files linked to an external website, rather than the inclusion within the git repository. We see the inclusion of the large files in github to be inefficient for downloading the code. In addition to the above mentioned large files, we will also release:
-- Model weights for each base learner on the BP4D dataset
-- Model weights for each base learner on the DISFA dataset
+Each of these can be downloaded from the huggingface repository at: 
+- Each base learners' predictions for the BP4D dataset (See: data/predictions/BP4D_compressed)
+- Each base learners' predictions for the DISFA dataset (See: data/predictions/DISFA_compressed)
+- Model weights for the stacking head (MoE) on the BP4D dataset (See: data/weights/stacking_head/BP4D_compressed)
+- Model weights for the stacking head (MoE) on the DISFA dataset (See: data/weights/stacking_head/DISFA_compressed)
+- The SynAU dataset (See: data/datasets/SynAU_compressed)
 
 ## 2. Conda environment:
 Assumed prerequisites:
@@ -49,7 +40,6 @@ conda env create -f environment.yml
 
 
 ## 3. Uncompress all:
-UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. Instead of uncompressing the files, it will return an error stating that the compressed files are corrupted.
 
 Prerequisites:
 - Conda environment (created and activated).
@@ -59,7 +49,6 @@ python preprocessing/uncompress_all.py
 ```
 
 ## 4. Testing the stacking head:
-UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites: 
 - Download the following: (DISFA: data/predictions/DISFA_compressed, data/weights/stacking_head/DISFA_compressed) or (BP4D:data/predictions/BP4D_compressed, data/weights/stacking_head/BP4D_compressed)
 - Conda environment (created and activated).
@@ -79,7 +68,6 @@ DISFA:
 ```
 
 ## 5. Preprocessing:
-UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites:
 - Conda environment.
 - Uncompress all.
@@ -108,13 +96,10 @@ Create a python environment with the following requirements to run the cropping 
 
 
 ## 6. Testing the base learners:
-UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites: 
 - Conda environment.
 - Uncompress all.
 - Preprocessing.
-
-Due to the limited space allowed on our git LFS, we do not include the weights for the base learners. As discussed earlier in this document, following the clarification of CVPR we are unable to provide with an external link. However, upon acceptance we release them on a different website than github.
 
 However, when one has the weights you run it by doing the following. The output is stored in data/predictions/BP4D_computeLocal which is the same data as we provide in data/predictions/BP4D_compressed.
 
@@ -131,7 +116,6 @@ DISFA (baselearners options 0-46):
 
 
 ## 7. SynAU dataset:
-UPDATE: Due to the CVPR requirement to use an anonymous git submission, this code will not run. The compressed files are corrupted on the anonymous github repo.
 Prerequisites:
 - Uncompress all.
 
@@ -223,9 +207,13 @@ Note: We acknowledge the slight discrepancy between a few reported numbers here 
 
 
 ```bibtex
-@misc{yourproject2024,
-  author = {Removed for blind review},
-  title = {Borda Ranking with Synthetic Data and Ensembles for Facial Action Unit Recognition},
-  year = {TO BE FILLED AFTER ACCEPTANCE.},
-  publisher = {TO BE FILLED AFTER ACCEPTANCE.}
+@article{sumsion2025meta,
+  title={A Meta-Learner Based on the Combination of Stacking Ensembles and a Mixture of Experts for Balancing Action Unit Recognition},
+  author={Sumsion, Andrew and Lee, Dah-Jye},
+  journal={Electronics},
+  volume={14},
+  number={13},
+  pages={2665},
+  year={2025},
+  publisher={MDPI}
 }
